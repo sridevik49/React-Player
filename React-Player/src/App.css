@@ -1,0 +1,210 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+  /* ------------------ GLOBAL STYLES ------------------ */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+  }
+
+  .player {
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      height: auto;
+
+      .video {
+          margin-top: 10px;
+          padding: 10px;
+      }
+
+      .overAll {
+          margin: 20px;
+      }
+
+      .seek {
+          display: flex;
+          gap: 10px;
+          margin-left: 10px;
+          margin-bottom: 30px;
+      }
+
+      .btn {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 50px;
+          margin-top: 20px;
+      }
+
+      .volume {
+          display: flex;
+          gap: 10px;
+
+          button {
+              background: transparent;
+              border: none;
+              cursor: pointer;
+
+
+
+              i {
+                  background: transparent;
+                  color: white;
+                  font-size: large;
+              }
+          }
+
+      }
+
+      .play {
+          display: flex;
+          gap: 10px;
+
+          button {
+              background: transparent;
+              padding: 10px;
+              color: white;
+              border: none;
+              transition: color 0.3s ease, transform 0.2s ease;
+              cursor: pointer;
+
+
+              i {
+                  background: transparent;
+                  color: white;
+                  font-size: 30px;
+
+
+              }
+              
+
+             
+          }
+
+          .playbtn {
+              background: white;
+              padding: 10px;
+              border-radius: 130px;
+              border: none;
+              transition: color 0.3s ease, transform 0.2s ease;
+              cursor: pointer;
+
+              i {
+                  background: transparent;
+                  color: black;
+                  font-size: 30px;
+
+
+              }
+              i:hover{
+                color: black;
+              }
+          }
+
+          button:hover{
+             transform: scale(1.2);
+          }
+
+          .seek-btn:hover {
+              transform: scale(1.2);
+              i{
+                color: grey;
+              }
+                
+              
+          }
+      }
+
+      .speed {
+          padding: 10px;
+          transition: color 0.3s ease, transform 0.2s ease;
+
+          select {
+              padding: 5px;
+              border-radius: 8px;
+          }
+          
+      }
+      .speed:hover{
+            transform: scale(1.1);
+          }
+  }
+
+
+  /* ------------------ MEDIA QUERIES FOR RESPONSIVE ------------------ */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .player {
+        padding: 5px;
+
+        .seek {
+            gap: 5px;
+
+            input[type="range"] {
+                width: 100%;
+            }
+
+            .seek-btn {
+                font-size: 12px;
+                padding: 4px 6px;
+            }
+        }
+
+        .btn {
+            gap: 5px;
+
+            .volume i {
+                font-size: 18px;
+            }
+
+            .play i {
+                font-size: 24px;
+            }
+
+            .playbtn i {
+                font-size: 24px;
+            }
+
+            .speed select {
+                font-size: 12px;
+                padding: 4px;
+            }
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .player {
+        padding: 5px;
+
+        .seek {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 5px;
+
+            input[type="range"] {
+                width: 100%;
+            }
+
+            .seek-btn {
+                width: 100%;
+            }
+        }
+
+        .btn {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 5px;
+
+            .volume, .play, .speed {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    }
+}
